@@ -18,8 +18,5 @@ struct FeatureImplementationProjectApp: App {
                     .environment(subscriptionManager)
             }
         }
-        .task {
-            await subscriptionManager.checkCurrentEntitlements()
-        }
     }
 }

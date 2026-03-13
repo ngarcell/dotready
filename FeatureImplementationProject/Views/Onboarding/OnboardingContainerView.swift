@@ -1,7 +1,6 @@
 import SwiftUI
 import UserNotifications
 import StoreKit
-import UIKit
 
 struct OnboardingContainerView: View {
     @Environment(SubscriptionManager.self) private var subscriptionManager
@@ -261,7 +260,10 @@ struct OnboardingContainerView: View {
                     .multilineTextAlignment(.center)
                 VStack(spacing: 12) {
                     Button {
-                        advancePage()
+                        if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+                            AppStore.requestReview(in: scene)
+                        }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { advancePage() }
                     } label: {
                         HStack {
                             Image(systemName: "star.fill")
@@ -413,32 +415,12 @@ struct OnboardingContainerView: View {
                     completeOnboarding()
                 }
 
-                if let errorMessage = subscriptionManager.errorMessage {
-                    Text(errorMessage)
-                        .font(.caption)
-                        .foregroundStyle(.red)
-                        .multilineTextAlignment(.center)
-                }
-
                 HStack(spacing: 16) {
-                    Button("Restore Purchases") { Task { 
-                        let success = await subscriptionManager.restorePurchases()
-                        if success {
-                            completeOnboarding()
-                        }
-                    } }
+                    Button("Restore Purchases") { Task { await subscriptionManager.restorePurchases() } }
                     Text("·").foregroundStyle(.tertiary)
-                    Button("Terms of Service") { 
-                        if let url = URL(string: "https://yourdomain.com/terms") {
-                            UIApplication.shared.open(url)
-                        }
-                    }
+                    Button("Terms of Service") {}
                     Text("·").foregroundStyle(.tertiary)
-                    Button("Privacy Policy") { 
-                        if let url = URL(string: "https://yourdomain.com/privacy") {
-                            UIApplication.shared.open(url)
-                        }
-                    }
+                    Button("Privacy Policy") {}
                 }
                 .font(.caption2)
                 .foregroundStyle(.secondary)

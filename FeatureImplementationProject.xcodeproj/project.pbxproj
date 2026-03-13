@@ -12,27 +12,27 @@
 			containerPortal = 105FC5722E9EAD3100EA8BCF /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 105FC5792E9EAD3100EA8BCF;
-			remoteInfo = DOTReady;
+			remoteInfo = FeatureImplementationProject;
 		};
 		105FC5942E9EAD3200EA8BCF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 105FC5722E9EAD3100EA8BCF /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 105FC5792E9EAD3100EA8BCF;
-			remoteInfo = DOTReady;
+			remoteInfo = FeatureImplementationProject;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		105FC57A2E9EAD3100EA8BCF /* DOTReady.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DOTReady.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		105FC5892E9EAD3200EA8BCF /* DOTReadyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DOTReadyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		105FC5932E9EAD3200EA8BCF /* DOTReadyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DOTReadyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		105FC57A2E9EAD3100EA8BCF /* FeatureImplementationProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeatureImplementationProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		105FC5892E9EAD3200EA8BCF /* FeatureImplementationProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeatureImplementationProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		105FC5932E9EAD3200EA8BCF /* FeatureImplementationProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeatureImplementationProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		105FC57C2E9EAD3100EA8BCF /* DOTReady */ = {
+		105FC57C2E9EAD3100EA8BCF /* FeatureImplementationProject */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = DOTReady;
+			path = FeatureImplementationProject;
 			sourceTree = "<group>";
 		};
 		105FC58C2E9EAD3200EA8BCF /* FeatureImplementationProjectTests */ = {
@@ -75,7 +75,7 @@
 		105FC5712E9EAD3100EA8BCF = {
 			isa = PBXGroup;
 			children = (
-				105FC57C2E9EAD3100EA8BCF /* DOTReady */,
+				105FC57C2E9EAD3100EA8BCF /* FeatureImplementationProject */,
 				105FC58C2E9EAD3200EA8BCF /* FeatureImplementationProjectTests */,
 				105FC5962E9EAD3200EA8BCF /* FeatureImplementationProjectUITests */,
 				105FC57B2E9EAD3100EA8BCF /* Products */,
@@ -85,9 +85,9 @@
 		105FC57B2E9EAD3100EA8BCF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				105FC57A2E9EAD3100EA8BCF /* DOTReady.app */,
-				105FC5892E9EAD3200EA8BCF /* DOTReadyTests.xctest */,
-				105FC5932E9EAD3200EA8BCF /* DOTReadyUITests.xctest */,
+				105FC57A2E9EAD3100EA8BCF /* FeatureImplementationProject.app */,
+				105FC5892E9EAD3200EA8BCF /* FeatureImplementationProjectTests.xctest */,
+				105FC5932E9EAD3200EA8BCF /* FeatureImplementationProjectUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,9 +95,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		105FC5792E9EAD3100EA8BCF /* DOTReady */ = {
+		105FC5792E9EAD3100EA8BCF /* FeatureImplementationProject */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 105FC59D2E9EAD3200EA8BCF /* Build configuration list for PBXNativeTarget "DOTReady" */;
+			buildConfigurationList = 105FC59D2E9EAD3200EA8BCF /* Build configuration list for PBXNativeTarget "FeatureImplementationProject" */;
 			buildPhases = (
 				105FC5762E9EAD3100EA8BCF /* Sources */,
 				105FC5772E9EAD3100EA8BCF /* Frameworks */,
@@ -108,18 +108,18 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				105FC57C2E9EAD3100EA8BCF /* DOTReady */,
+				105FC57C2E9EAD3100EA8BCF /* FeatureImplementationProject */,
 			);
-			name = DOTReady;
+			name = FeatureImplementationProject;
 			packageProductDependencies = (
 			);
-			productName = DOTReady;
-			productReference = 105FC57A2E9EAD3100EA8BCF /* DOTReady.app */;
+			productName = FeatureImplementationProject;
+			productReference = 105FC57A2E9EAD3100EA8BCF /* FeatureImplementationProject.app */;
 			productType = "com.apple.product-type.application";
 		};
-		105FC5882E9EAD3200EA8BCF /* DOTReady */ = {
+		105FC5882E9EAD3200EA8BCF /* FeatureImplementationProjectTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 105FC5A02E9EAD3200EA8BCF /* Build configuration list for PBXNativeTarget "DOTReady" */;
+			buildConfigurationList = 105FC5A02E9EAD3200EA8BCF /* Build configuration list for PBXNativeTarget "FeatureImplementationProjectTests" */;
 			buildPhases = (
 				105FC5852E9EAD3200EA8BCF /* Sources */,
 				105FC5862E9EAD3200EA8BCF /* Frameworks */,
@@ -133,16 +133,16 @@
 			fileSystemSynchronizedGroups = (
 				105FC58C2E9EAD3200EA8BCF /* FeatureImplementationProjectTests */,
 			);
-			name = DOTReady;
+			name = FeatureImplementationProjectTests;
 			packageProductDependencies = (
 			);
-			productName = DOTReady;
-			productReference = 105FC5892E9EAD3200EA8BCF /* DOTReadyTests.xctest */;
+			productName = FeatureImplementationProjectTests;
+			productReference = 105FC5892E9EAD3200EA8BCF /* FeatureImplementationProjectTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		105FC5922E9EAD3200EA8BCF /* DOTReady */ = {
+		105FC5922E9EAD3200EA8BCF /* FeatureImplementationProjectUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 105FC5A32E9EAD3200EA8BCF /* Build configuration list for PBXNativeTarget "DOTReady" */;
+			buildConfigurationList = 105FC5A32E9EAD3200EA8BCF /* Build configuration list for PBXNativeTarget "FeatureImplementationProjectUITests" */;
 			buildPhases = (
 				105FC58F2E9EAD3200EA8BCF /* Sources */,
 				105FC5902E9EAD3200EA8BCF /* Frameworks */,
@@ -156,11 +156,11 @@
 			fileSystemSynchronizedGroups = (
 				105FC5962E9EAD3200EA8BCF /* FeatureImplementationProjectUITests */,
 			);
-			name = DOTReady;
+			name = FeatureImplementationProjectUITests;
 			packageProductDependencies = (
 			);
-			productName = DOTReady;
-			productReference = 105FC5932E9EAD3200EA8BCF /* DOTReadyUITests.xctest */;
+			productName = FeatureImplementationProjectUITests;
+			productReference = 105FC5932E9EAD3200EA8BCF /* FeatureImplementationProjectUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -186,7 +186,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 105FC5752E9EAD3100EA8BCF /* Build configuration list for PBXProject "DOTReady" */;
+			buildConfigurationList = 105FC5752E9EAD3100EA8BCF /* Build configuration list for PBXProject "FeatureImplementationProject" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -200,9 +200,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				105FC5792E9EAD3100EA8BCF /* DOTReady */,
-				105FC5882E9EAD3200EA8BCF /* DOTReady */,
-				105FC5922E9EAD3200EA8BCF /* DOTReady */,
+				105FC5792E9EAD3100EA8BCF /* FeatureImplementationProject */,
+				105FC5882E9EAD3200EA8BCF /* FeatureImplementationProjectTests */,
+				105FC5922E9EAD3200EA8BCF /* FeatureImplementationProjectUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -258,12 +258,12 @@
 /* Begin PBXTargetDependency section */
 		105FC58B2E9EAD3200EA8BCF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 105FC5792E9EAD3100EA8BCF /* DOTReady */;
+			target = 105FC5792E9EAD3100EA8BCF /* FeatureImplementationProject */;
 			targetProxy = 105FC58A2E9EAD3200EA8BCF /* PBXContainerItemProxy */;
 		};
 		105FC5952E9EAD3200EA8BCF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 105FC5792E9EAD3100EA8BCF /* DOTReady */;
+			target = 105FC5792E9EAD3100EA8BCF /* FeatureImplementationProject */;
 			targetProxy = 105FC5942E9EAD3200EA8BCF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -402,7 +402,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = DOTReady;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "DOT Ready needs access to your photo library to store document images for compliance tracking.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -413,7 +412,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.softlog.dotready";
+				PRODUCT_BUNDLE_IDENTIFIER = app.rork.feature-implementation-olyr8zx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -437,7 +436,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = DOTReady;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "DOT Ready needs access to your photo library to store document images for compliance tracking.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -448,7 +446,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.softlog.dotready";
+				PRODUCT_BUNDLE_IDENTIFIER = app.rork.feature-implementation-olyr8zx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -547,7 +545,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		105FC5752E9EAD3100EA8BCF /* Build configuration list for PBXProject "DOTReady" */ = {
+		105FC5752E9EAD3100EA8BCF /* Build configuration list for PBXProject "FeatureImplementationProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				105FC59B2E9EAD3200EA8BCF /* Debug */,
@@ -556,7 +554,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		105FC59D2E9EAD3200EA8BCF /* Build configuration list for PBXNativeTarget "DOTReady" */ = {
+		105FC59D2E9EAD3200EA8BCF /* Build configuration list for PBXNativeTarget "FeatureImplementationProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				105FC59E2E9EAD3200EA8BCF /* Debug */,
@@ -565,7 +563,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		105FC5A02E9EAD3200EA8BCF /* Build configuration list for PBXNativeTarget "DOTReady" */ = {
+		105FC5A02E9EAD3200EA8BCF /* Build configuration list for PBXNativeTarget "FeatureImplementationProjectTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				105FC5A12E9EAD3200EA8BCF /* Debug */,
@@ -574,7 +572,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		105FC5A32E9EAD3200EA8BCF /* Build configuration list for PBXNativeTarget "DOTReady" */ = {
+		105FC5A32E9EAD3200EA8BCF /* Build configuration list for PBXNativeTarget "FeatureImplementationProjectUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				105FC5A42E9EAD3200EA8BCF /* Debug */,
