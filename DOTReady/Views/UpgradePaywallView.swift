@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 struct UpgradePaywallView: View {
     @Environment(SubscriptionManager.self) private var subscription
@@ -54,12 +55,32 @@ struct UpgradePaywallView: View {
                             .clipShape(.rect(cornerRadius: 14))
                     }
 
+                    if let errorMessage = subscription.errorMessage {
+                        Text(errorMessage)
+                            .font(.caption)
+                            .foregroundStyle(.red)
+                            .multilineTextAlignment(.center)
+                    }
+
                     HStack(spacing: 16) {
-                        Button("Restore Purchases") { Task { await subscription.restorePurchases() } }
+                        Button("Restore Purchases") { Task { 
+                            let success = await subscription.restorePurchases()
+                            if success {
+                                dismiss()
+                            }
+                        } }
                         Text("·").foregroundStyle(.tertiary)
-                        Button("Terms") {}
+                        Button("Terms") { 
+                            if let url = URL(string: "https://yourdomain.com/terms") {
+                                UIApplication.shared.open(url)
+                            }
+                        }
                         Text("·").foregroundStyle(.tertiary)
-                        Button("Privacy") {}
+                        Button("Privacy") { 
+                            if let url = URL(string: "https://yourdomain.com/privacy") {
+                                UIApplication.shared.open(url)
+                            }
+                        }
                     }
                     .font(.caption2)
                     .foregroundStyle(.secondary)

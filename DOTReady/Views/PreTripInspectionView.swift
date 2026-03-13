@@ -1,8 +1,10 @@
 import SwiftUI
+import StoreKit
 
 struct PreTripInspectionView: View {
     @Environment(DataStore.self) private var store
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.requestReview) private var requestReview
     @State private var inspection: Inspection
     @State private var currentSectionIndex = 0
     @State private var elapsedSeconds: Int = 0
@@ -40,6 +42,7 @@ struct PreTripInspectionView: View {
                         final.vehicleName = v.displayName
                     }
                     store.addInspection(final)
+                    requestReview()
                     dismiss()
                 }
             } else {
