@@ -11,9 +11,14 @@ nonisolated enum SubscriptionTier: String, Codable, Sendable {
 @Observable
 @MainActor
 class SubscriptionManager {
+    static let monthlyProductID = "com.softlog.dotready.monthly"
+    static let annualProductID = "com.softlog.dotready.annual"
+
     var currentTier: SubscriptionTier = .free
     var isTrialActive: Bool = false
     var trialEndDate: Date?
+    var isLoading = false
+    var errorMessage: String?
 
     private let tierKey = "subscription_tier"
     private let trialKey = "trial_end_date"
@@ -70,10 +75,77 @@ class SubscriptionManager {
         UserDefaults.standard.set(true, forKey: dismissedPaywallKey)
     }
 
-    func restorePurchases() async {
+    func restorePurchases() async -> Bool {
+        isLoading = true
+        defer { isLoading = false }
+        
         do {
             try await AppStore.sync()
+            for await entitlement in Transaction.currentEntitlements {
+                if case .verified(let transaction) = entitlement {
+                    await handleVerifiedTransaction(transaction)
+                    return true
+                }
+            }
+            return false
         } catch {
+            errorMessage = "Failed to restore purchases. Please try again."
+            return false
+        }
+    }
+
+    func purchaseProduct(_ product: Product) async -> Bool {
+        isLoading = true
+        defer { isLoading = false }
+        
+        do {
+            let result = try await product.purchase()
+            switch result {
+            case .success(let verificationResult):
+                if case .verified(let transaction) = verificationResult {
+                    await handleVerifiedTransaction(transaction)
+                    await transaction.finish()
+                    return true
+                } else {
+                    errorMessage = "Purchase verification failed."
+                    return false
+                }
+            case .userCancelled:
+                return false
+            case .pending:
+                errorMessage = "Purchase is pending approval."
+                return false
+            @unknown default:
+                errorMessage = "Purchase failed. Please try again."
+                return false
+            }
+        } catch {
+            errorMessage = "Purchase failed: \(error.localizedDescription)"
+            return false
+        }
+    }
+
+    private func handleVerifiedTransaction(_ transaction: Transaction) async {
+        if let expirationDate = transaction.expirationDate, expirationDate > Date() {
+            trialEndDate = expirationDate
+            isTrialActive = true
+            UserDefaults.standard.set(expirationDate, forKey: trialKey)
+        }
+        
+        switch transaction.productType {
+        case .autoRenewable:
+            currentTier = .pro
+            UserDefaults.standard.set(SubscriptionTier.pro.rawValue, forKey: tierKey)
+        default:
+            break
+        }
+    }
+
+    func checkCurrentEntitlements() async {
+        for await entitlement in Transaction.currentEntitlements {
+            if case .verified(let transaction) = entitlement {
+                await handleVerifiedTransaction(transaction)
+            }
         }
     }
 }
